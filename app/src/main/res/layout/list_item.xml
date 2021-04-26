@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    
+    <data>
+        <variable
+            name="obj"
+            type="com.vaibhav.android.viewbinding.TemperatureData" />
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <ImageView
+            android:id="@+id/imgView"
+            android:layout_width="40dp"
+            android:layout_height="fill_parent"
+            android:src="@{obj.url}"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+        </ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/imgView"
+            android:textSize="25sp"
+            android:layout_marginStart="15dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="@{obj.location}"
+            android:id="@+id/firstline">
+
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            app:layout_constraintStart_toEndOf="@id/imgView"
+            app:layout_constraintTop_toBottomOf="@id/firstline"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:textSize="25sp"
+            android:text="@{obj.celsius}"
+            android:id="@+id/secondLine">
+
+        </TextView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

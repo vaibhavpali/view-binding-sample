@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="temperature"
+            type="com.vaibhav.android.viewbinding.TemperatureData" />
+        <variable
+            name="presenter"
+            type="com.vaibhav.android.viewbinding.MainActivityPresenter" />
+    </data>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/myRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</layout>
